@@ -1,0 +1,78 @@
+-- this setup is an edited version taken from https://www.splitbrain.org/blog/2016-11/20-simple_conky_setup
+
+conky.config = {
+    use_xft = true,
+    xftalpha = 0.8,
+    update_interval = 1.0,
+    total_run_times = 0,
+    own_window = true,
+    own_window_transparent = true,
+    own_window_argb_visual = true,
+    own_window_type = 'normal',
+    own_window_class = 'conky-semi',
+    own_window_hints = 'undecorated,below,sticky,skip_taskbar,skip_pager',
+    background = false,
+    double_buffer = true,
+    imlib_cache_size = 0,
+    no_buffers = true,
+    uppercase = false,
+    cpu_avg_samples = 4,
+    override_utf8_locale = true,
+ 
+    -- placement
+    alignment = 'top_right',
+    gap_x = 40,
+    gap_y = 20,
+ 
+    -- default drawing
+    maximum_width = 310,
+    draw_shades = false,
+    draw_outline = false,
+    draw_borders = false,
+    draw_graph_borders = true,
+    default_bar_width = 100, default_bar_height = 5,
+    default_graph_width = 150, default_graph_height = 12,
+    default_gauge_width = 20, default_gauge_height = 20,
+ 
+    -- colors
+    font = 'Liberation Mono:size=10',
+    default_color = 'FFFFFF',
+    color1 = 'FFFFFF',
+    color2 = 'FFFFFF',
+    color3 = 'FFFFFF',
+ 
+    -- layouting
+    template0 = [[${font Liberation Sans:bold:size=11}${color2}\1 ${color3}${hr 2}${font}]],
+    template1 = [[${color1}\1]],
+    template2 = [[${goto 160}${color}]],
+
+};
+ 
+conky.text = [[
+                                             
+ 
+${template0 System}
+
+${template1 Hostname}                ${template2}${nodename}
+
+${template1 ${sysname}}              ${template2}${kernel}-${machine}
+
+${template1 Uptime}                  ${template2}${uptime_short}
+
+${template1 CPU\ Die Temp}        ${template2}${execi 60 sensors | grep -e "Tdie:" | tr -d "Tdie: \t +"}
+
+${template1 GPU\ Temperature}        ${template2}${execi 60 nvidia-smi --query-gpu=temperature.gpu --format=csv,noheader}°C
+
+ 
+${template0 Resources}
+
+${template1 CPU Load}                ${template2}${loadavg 1}%               
+
+${template1 RAM}                     ${template2}${mem} / ${memmax}
+
+${template1 Nvme}                    ${template2}${fs_used /} / ${fs_size /}
+
+${template1 SSD}                     ${template2}${fs_used /mnt/f2abc200-434f-4def-972e-713bd3170644} / ${fs_size /mnt/f2abc200-434f-4def-972e-713bd3170644}
+                                                                            
+ 
+]];
