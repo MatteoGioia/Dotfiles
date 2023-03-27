@@ -59,7 +59,7 @@ ${template1 ${sysname}}              ${template2}${kernel}-${machine}
 
 ${template1 Uptime}                  ${template2}${uptime_short}
 
-${template1 CPU\ Die Temp}        ${template2}${execi 60 sensors | grep -e "Tdie:" | tr -d "Tdie: \t +"}
+${template1 CPU\ Die Temp}        ${template2}${execi 60 sensors | grep -e "Tctl:" | tr -d "Tctl: \t +"}
 
 ${template1 GPU\ Temperature}        ${template2}${execi 60 nvidia-smi --query-gpu=temperature.gpu --format=csv,noheader}°C
 
