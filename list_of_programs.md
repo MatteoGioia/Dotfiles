@@ -16,5 +16,9 @@ Gaming:
 Productivity:
 - Obsidan (FP)
 - Discord (FP)
-- Visual Studio Code
 - Firefox
+
+Coding/Dev:
+- sdkman
+- asdf
+- Visual Studio Code
