@@ -26,4 +26,5 @@
 ### Coding/Dev:
 - sdkman
 - asdf
+- git credential manager
 
