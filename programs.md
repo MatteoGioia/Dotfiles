@@ -22,9 +22,19 @@
 - Firefox 
 - VSCODE 
 - snx (see uniroma guide + edo's guide)
+- 
 
 ### Coding/Dev:
 - sdkman
 - asdf
 - git credential manager
+
+# Theming
+
+- Cursor : adwaita
+- Icons: papirus light
+- App icons: orchis light compact
+
+#Other 
+- App startup: conky, insync, gwe
 
