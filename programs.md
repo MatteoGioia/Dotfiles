@@ -1,10 +1,8 @@
-# List of programs I use
+# Programs to install
 
 ### General
-- UFW/GUFW
 - Flatseal (manage flatpak)
-- GreenWithEnvy 
-- Conky 
+- CoolerControl (works on wayland!)
 - Insync
 - KeepassXC
 - VLC
@@ -13,7 +11,6 @@
 - steam + protontricks + protonup
 - gamemode
 - mangohud (put conf in steam/config/MangoHud/)
-- wine + winetricks
 - lutris
 
 ### Productivity:
@@ -22,19 +19,22 @@
 - Firefox 
 - VSCODE 
 - snx (see uniroma guide + edo's guide)
-- 
 
 ### Coding/Dev:
 - sdkman
 - asdf
 - git credential manager
+- podman
 
-# Theming
+### Theming
 
 - Cursor : adwaita
 - Icons: papirus light
 - App icons: orchis light compact
+- Orchis for overall theming
 
-#Other 
-- App startup: conky, insync, gwe
+# Handy guides
 
+### Podman debugging with flatpak vscode
+
+https://www.zihad.com.bd/posts/setup-vscode-flatpak-devcontainer-with-podman/

@@ -1,0 +1,103 @@
+{
+    "$schema": "https://raw.githubusercontent.com/JanDeDobbeleer/oh-my-posh/main/themes/schema.json",
+    "blocks": [
+      {
+        "type": "prompt",
+        "alignment": "left",
+        "segments": [
+          {
+            "properties": {
+              "cache_duration": "none",
+              "style": "folder"
+            },
+            "template": "[\ue5ff {{ .Path }}]",
+            "foreground": "#3EC669",
+            "type": "path",
+            "style": "plain"
+          },
+          {
+            "properties": {
+              "branch_icon": "",
+              "cache_duration": "none"
+            },
+            "template": "[{{ .HEAD }}]",
+            "foreground": "#43CCEA",
+            "type": "git",
+            "style": "plain"
+          },
+          {
+            "properties": {
+              "cache_duration": "none",
+              "fetch_version": false
+            },
+            "template": "[\ue235  {{ if .Error }}{{ .Error }}{{ else }}{{ if .Venv }}{{ .Venv }} {{ end }}{{ .Full }}{{ end }}]",
+            "foreground": "#7FD5EA",
+            "type": "python",
+            "style": "plain"
+          },
+          {
+            "properties": {
+              "cache_duration": "none",
+              "fetch_version": false
+            },
+            "template": "[\ufcd1{{ if .Error }}{{ .Error }}{{ else }}{{ .Full }}{{ end }}]",
+            "foreground": "#7FD5EA",
+            "type": "go",
+            "style": "plain"
+          },
+          {
+            "properties": {
+              "cache_duration": "none",
+              "fetch_version": false
+            },
+            "template": "[\ue718{{ if .PackageManagerIcon }}{{ .PackageManagerIcon }} {{ end }}{{ .Full }}]",
+            "foreground": "#42E66C",
+            "type": "node",
+            "style": "plain"
+          },
+          {
+            "properties": {
+              "cache_duration": "none",
+              "fetch_version": false
+            },
+            "template": "[\ue791{{ if .Error }}{{ .Error }}{{ else }}{{ .Full }}{{ end }}]",
+            "foreground": "#E64747",
+            "type": "ruby",
+            "style": "plain"
+          },
+          {
+            "properties": {
+              "cache_duration": "none",
+              "fetch_version": false
+            },
+            "template": "[\ue738{{ if .Error }}{{ .Error }}{{ else }}{{ .Full }}{{ end }}]",
+            "foreground": "#E64747",
+            "background": "#F5F5DC",
+            "type": "java",
+            "style": "plain"
+          },
+          {
+            "properties": {
+              "cache_duration": "none",
+              "fetch_version": false
+            },
+            "template": "[\ue624{{ if .Error }}{{ .Error }}{{ else }}{{ .Full }}{{ end }}]",
+            "foreground": "#9B6BDF",
+            "type": "julia",
+            "style": "plain"
+          },
+          {
+            "properties": {
+              "cache_duration": "none"
+            },
+            "template": "❯❯❯ ",
+            "foreground": "#9B6BDF",
+            "type": "session",
+            "style": "plain"
+          }
+        ]
+      }
+    ],
+    "version": 3
+  }
+  

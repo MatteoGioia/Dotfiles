@@ -1,0 +1,113 @@
+{
+  "$schema": "https://raw.githubusercontent.com/JanDeDobbeleer/oh-my-posh/main/themes/schema.json",
+  "version": 2,
+  "blocks": [
+    {
+      "type": "rprompt",
+      "alignment": "right",
+      "segments": [
+        {
+          "type": "path",
+          "style": "plain",
+          "foreground": "#3EC669",
+          "template": "[\ue5ff {{ .Path }}]",
+          "properties": {
+            "style": "folder"
+          }
+        },
+        {
+          "type": "git",
+          "style": "plain",
+          "foreground": "#43CCEA",
+          "template": "[{{ .HEAD }}]",
+          "properties": {
+            "branch_icon": ""
+          }
+        },
+        {
+          "type": "python",
+          "style": "plain",
+          "foreground": "#7FD5EA",
+          "template": "[\ue235  {{ if .Error }}{{ .Error }}{{ else }}{{ if .Venv }}{{ .Venv }} {{ end }}{{ .Full }}{{ end }}]",
+          "properties": {
+            "fetch_version": false
+          }
+        },
+        {
+          "type": "go",
+          "style": "plain",
+          "foreground": "#7FD5EA",
+          "template": "[\ufcd1{{ if .Error }}{{ .Error }}{{ else }}{{ .Full }}{{ end }}]",
+          "properties": {
+            "fetch_version": false
+          }
+        },
+        {
+          "type": "node",
+          "style": "plain",
+          "foreground": "#42E66C",
+          "template": "[\ue718{{ if .PackageManagerIcon }}{{ .PackageManagerIcon }} {{ end }}{{ .Full }}]",
+          "properties": {
+            "fetch_version": false
+          }
+        },
+        {
+          "type": "ruby",
+          "style": "plain",
+          "foreground": "#E64747",
+          "template": "[\ue791{{ if .Error }}{{ .Error }}{{ else }}{{ .Full }}{{ end }}]",
+          "properties": {
+            "fetch_version": false
+          }
+        },
+        {
+          "type": "java",
+          "style": "plain",
+          "foreground": "#E64747",
+          "background": "#F5F5DC",
+          "template": "[\ue738{{ if .Error }}{{ .Error }}{{ else }}{{ .Full }}{{ end }}]",
+          "properties": {
+            "fetch_version": false
+          }
+        },
+        {
+          "type": "julia",
+          "style": "plain",
+          "foreground": "#9B6BDF",
+          "template": "[\ue624{{ if .Error }}{{ .Error }}{{ else }}{{ .Full }}{{ end }}]",
+          "properties": {
+            "fetch_version": false
+          }
+        },
+        {
+          "type": "battery",
+          "style": "plain",
+          "foreground": "#9B6BDF",
+          "foreground_templates": [
+            "{{if eq \"Charging\" .State.String}}#40c4ff{{end}}",
+            "{{if eq \"Discharging\" .State.String}}#ff5722{{end}}",
+            "{{if eq \"Full\" .State.String}}#4caf50{{end}}"
+          ],
+          "template": "[{{ if not .Error }}{{ .Icon }}{{ .Percentage }}{{ end }}{{ .Error }}]",
+          "properties": {
+            "charged_icon": "\u25cf ",
+            "charging_icon": "\u21e1 ",
+            "discharging_icon": "\u21e3 "
+          }
+        }
+      ]
+    },
+    {
+      "type": "prompt",
+      "alignment": "left",
+      "segments": [
+        {
+          "type": "session",
+          "style": "plain",
+          "foreground": "#9B6BDF",
+          "template": "[{{ .UserName }}]❯"
+        }
+      ]
+    }
+  ]
+}

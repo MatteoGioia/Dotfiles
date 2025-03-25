@@ -1,0 +1,7 @@
+[Desktop Entry]
+Version=1.0
+Type=Application
+Terminal=false
+Exec=sudo nvidia-smi -pl 190
+Name=PowerLimit GPU
+Comment=Power limits gpu to 190 Watts
